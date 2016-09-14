@@ -9,6 +9,9 @@ Plugin 'VundleVim/Vundle.vim'
 Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-fugitive'
+Plugin 'garbas/vim-snipmate'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
 Plugin 'pietgeursen/vim-snippets'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic.git'
@@ -40,6 +43,14 @@ let mapleader = ","
 noremap <tab> <c-w><c-w>
 " Ctrl tab between alternate buffer
 nmap <leader><tab> <c-^> 
+tnoremap <A-h> <C-\><C-n><C-w>h
+tnoremap <A-j> <C-\><C-n><C-w>j
+tnoremap <A-k> <C-\><C-n><C-w>k
+tnoremap <A-l> <C-\><C-n><C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 nmap <leader>q :bd<CR>
 
@@ -58,7 +69,7 @@ nmap <leader>um :Gpush origin master <CR>
 
 "" ctrlp.vim
 set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
+set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__,node_modules
 let g:ctrlp_working_path_mode = 'ra'
 
 " let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
@@ -68,6 +79,10 @@ noremap <leader>b :CtrlPBuffer<CR>
 let g:ctrlp_map = '<leader>e'
 let g:ctrlp_open_new_file = 'r'
 
+" send to node
+nmap <leader>n :w !node<CR>
+" test
+nmap ` :!npm test<CR>
 
 set ts=2                " number of spaces in a tab
 set sw=2                " number of spaces for indent

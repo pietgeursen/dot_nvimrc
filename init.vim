@@ -16,6 +16,8 @@ Plugin 'pietgeursen/vim-snippets'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic.git'
 Plugin 'pangloss/vim-javascript'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'vim-airline/vim-airline'
 call vundle#end()            " required
 
 filetype plugin indent on    " required
@@ -32,6 +34,12 @@ if has("persistent_undo")
 endif
 
 let g:syntastic_javascript_checkers = ['standard']
+
+syntax enable
+
+" colours
+set background=dark
+colorscheme candycode
 
 "Remap leader
 let mapleader = ","

@@ -18,6 +18,8 @@ Plugin 'scrooloose/syntastic.git'
 Plugin 'pangloss/vim-javascript'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-airline/vim-airline'
+Plugin 'moll/vim-node'
+Plugin 'mileszs/ack.vim'
 call vundle#end()            " required
 
 filetype plugin indent on    " required

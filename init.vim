@@ -39,6 +39,9 @@ let g:syntastic_javascript_checkers = ['standard']
 
 syntax enable
 
+"nerdtree toggle
+map <F3> :NERDTreeToggle<CR>
+
 " colours
 set background=dark
 colorscheme candycode
